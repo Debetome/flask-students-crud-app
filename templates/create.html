@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/create.css') }}"/>
+<div class="create-wrapper">
+    <h2>Add new student</h2>
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Student name"/>
+        <input type="text" name="lastname" placeholder="Student lastname"/>
+        <input type="text" name="dni" placeholder="Student DNI"/>
+        <input id="create-btn" type="submit" value="Add student"/>
+    </form>
+</div>
+{% endblock %}

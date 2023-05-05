@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/students-list.css') }}"/>
+<div class="student-wrapper">
+    <h2>Student list</h2>
+    <a id="add-student" href="{{ url_for('create') }}"><i class="fa-solid fa-circle-plus"></i></a>
+    <div class="student-list">
+        {% for student in students %}
+            <div class="student-item">
+                <div class="student-data">
+                    <header><b>Id: </b>{{ student.id }}</header>
+                    <header><b>Name: </b>{{ student.name }}</header>
+                    <header><b>Lastname: </b>{{ student.lastname }}</header>
+                    <header><b>DNI: </b>{{ student.dni }}</header>
+                </div>
+                <div class="student-input">
+                    <a id="edit-student" href="{{ url_for('edit', id=student.id) }}"><i class="fa-solid fa-pencil"></i></a>
+                    <a id="delete-student" href="{{ url_for('delete', id=student.id)}}"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

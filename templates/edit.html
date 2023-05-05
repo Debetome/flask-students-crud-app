@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit student{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/edit.css') }}"/>
+<div class="edit-wrapper">
+    <h2>Edit student</h2>
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Student name" value="{{ student.name }}"/>
+        <input type="text" name="lastname" placeholder="Student lastname" value="{{ student.lastname }}"/>
+        <input type="text" name="dni" placeholder="Student DNI" value="{{ student.dni }}"/>
+        <input id="edit-btn" type="submit" value="Edit student"/>
+    </form>
+</div>
+{% endblock %}

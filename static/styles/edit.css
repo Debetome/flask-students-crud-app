@@ -1,0 +1,49 @@
+.edit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    width: 30rem;
+    padding: 25px;
+    border-radius: 1rem; 
+    box-shadow: 10px 15px 10px rgba(0,0,0,0.3);
+}
+
+.edit-wrapper h2 {
+    margin: 1rem auto;
+}
+
+.edit-wrapper form {
+    margin: .1rem auto;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.edit-wrapper form input {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: .5rem;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: all 0.4s ease;
+}
+
+.edit-wrapper form input:focus {
+    border: 1px solid rgb(100, 201, 135);
+}
+
+#edit-btn {
+    background-color: rgb(100, 201, 135);
+}
+
+#edit-btn:hover {
+    filter: brightness(80%);
+}
+
+#edit-btn:active {
+    filter: brightness(60%);
+}
