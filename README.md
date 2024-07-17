@@ -1,6 +1,6 @@
 # Simple students crud app
 
-This is just a very simple and straight forward crud application made in flask, using sqlite3 as database, the registers are "students".
+A simple CRUD application to manage student records
 
 ## Screens
 
